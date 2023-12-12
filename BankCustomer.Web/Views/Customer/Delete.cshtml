@@ -1,0 +1,34 @@
+﻿@model Customer
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<div class="row">
+    <div class="col-md-12">
+        <h1>Delete</h1>
+
+        <h3>Are you sure you want to delete this?</h3>
+        <hr />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        @{
+            await Html.RenderPartialAsync("_DetailPartial", Model);
+        }
+        
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Delete">
+            @Html.HiddenFor( x=> x.customer_number)
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            <a asp-action="Index">Back to List</a>
+        </form>
+    </div>
+</div>
+
+    

@@ -1,0 +1,43 @@
+﻿@model Customer
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<form asp-action="Edit">
+    @Html.HiddenFor(x => x.customer_number)
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Edit</h1>
+
+            <h4>Customer</h4>
+            <hr />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        </div>
+    </div>
+    
+    @{
+        await Html.RenderPartialAsync("_customerFormFieldsPartial", Model);
+    }
+
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+
+            <div>
+                <a asp-action="Index">Back to List</a>
+            </div>
+
+
+
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+            }

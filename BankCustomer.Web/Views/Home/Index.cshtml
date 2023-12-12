@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h1>Welcome to Demo Bank</h1>
+        <p>Note, some assumptions were made for this demo:</p>
+        <ul>
+            <li>Storing of data: This is all stored in the session, by default, that's 20 minutes.</li>
+            <li>We're assuming you allow cookies. If this were a real full feature site, we would have access to a database or an API that you could call regularly and wouldn't require this.</li>
+            <li>This is an initial functional product used for a demo/mockup only.</li>
+            <li>Graphics would be utilized if provided or part of the initial design requirements. Part of the agile/scrum development process is to deliver based on the initial requirements and get iterative feedback from your product owner during your sprints. This product is considered a single sprint.</li>
+            <li>With graphics, we could demonstrate responsive design more visually and pre-load graphics to lower the page load times. </li>
+        </ul>
+        <hr />
+        
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Customer Registry</h5>
+                <p class="card-text">Manage the customer registry here. Add, edit, delete customers from here.</p>
+                <a asp-action="index" asp-controller="Customer" class="btn btn-primary">Go</a>
+            </div>
+        </div>
+    </div>
+</div>

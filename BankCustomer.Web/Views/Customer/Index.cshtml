@@ -1,0 +1,105 @@
+﻿@model IEnumerable<Customer>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="row">
+    <div class="col-md-12">
+        <h1>Customer List</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Feugiat in ante metus dictum at tempor commodo.
+        </p>
+        <hr />
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        @if (Model.Count() > 0)
+        {
+            <p>
+                <a asp-action="Create">Create New</a>
+            </p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.customer_number)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.first_name)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.last_name)
+                        </th>
+                        
+                        <th>
+                            @Html.DisplayNameFor(model => model.date_birth)
+                        </th>
+                        
+                        <th>
+                            @Html.DisplayNameFor(model => model.ssn)
+                        </th>
+
+                        <th>
+                            @Html.DisplayNameFor(model => model.age)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.customer_number)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.first_name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.last_name)
+                            </td>
+                            
+                            <td>
+                                @Html.DisplayFor(modelItem => item.date_birth)
+                            </td>
+                            
+                                @if (item.ssn != null)
+                                {
+                                    string hidden = "***-**-" + @item.ssn.Substring(item.ssn.Length - 4);
+                                    <td>@hidden</td>
+                                }
+                                else
+                                {
+                                <td>@item.ssn</td>
+                                }
+
+                            
+                            <td>
+                                @Html.DisplayFor(modelItem => item.age)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.customer_number }) |
+                                @Html.ActionLink("Details", "Details", new { id = item.customer_number }) |
+                                @Html.ActionLink("Delete", "Delete", new { id = item.customer_number })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        }
+        else
+        {
+            <p>No customers were found on the api.</p>
+        }
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+    </div>
+</div>
+
+
+

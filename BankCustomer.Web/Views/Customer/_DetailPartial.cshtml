@@ -1,0 +1,75 @@
+﻿@model Customer
+
+<div class="row">
+    <div class="col-md-12">
+        <h4>Customer</h4>
+        <hr />
+        <dl class="row">
+
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.customer_number)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.customer_number)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.first_name)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.first_name)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.last_name)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.last_name)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.date_birth)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.date_birth)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.age)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.age)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ssn)
+            </dt>
+            @if (Model.ssn != null)
+            {
+                string hidden = "***-**-" + @Model.ssn.Substring(Model.ssn.Length - 4);
+                <dd class="col-sm-10">@hidden</dd>
+            }
+            else
+            {
+                <dd class="col-sm-10">@Model.ssn</dd>
+            }
+            
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.email)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.email)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.mobile_phone_number)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.mobile_phone_number)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.join_date)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.join_date)
+            </dd>
+        </dl>
+    </div>
+</div>
+@{
+    await Html.RenderPartialAsync("_PrimaryAddressDetail", Model.primary_address);
+}

@@ -1,0 +1,107 @@
+﻿@model Customer
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <label asp-for="first_name" class="control-label"></label>
+            <input asp-for="first_name" class="form-control" />
+            <span asp-validation-for="first_name" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-group">
+            <label asp-for="last_name" class="control-label"></label>
+            <input asp-for="last_name" class="form-control" />
+            <span asp-validation-for="last_name" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-group">
+            <label asp-for="date_birth" class="control-label"></label>
+            
+                <input asp-for="date_birth" class="form-control" type="date" />
+            
+            
+            <span asp-validation-for="date_birth" class="text-danger"></span>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <label asp-for="ssn" class="control-label"></label>
+            <input asp-for="ssn" class="form-control" />
+            <span asp-validation-for="ssn" class="text-danger"></span>
+        </div>
+
+    </div>
+    <div class="col-md-4">
+        <div class="form-group">
+            <label asp-for="email" class="control-label"></label>
+            <input asp-for="email" class="form-control" type="email"/>
+            <span asp-validation-for="email" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-group">
+            <label asp-for="mobile_phone_number" class="control-label"></label>
+            <input asp-for="mobile_phone_number" class="form-control" />
+            <span asp-validation-for="mobile_phone_number" class="text-danger"></span>
+        </div>
+
+    </div>
+</div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label asp-for="join_date" class="control-label"></label>
+                <input asp-for="join_date" class="form-control" type="date" />
+                <span asp-validation-for="join_date" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+
+
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <h4>Customer Address</h4>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label asp-for="primary_address.address_line_1" class="control-label"></label>
+            <input asp-for="primary_address.address_line_1" class="form-control" />
+            <span asp-validation-for="primary_address.address_line_1" class="text-danger"></span>
+        </div>
+    </div>
+
+</div>
+<div class="row">
+
+    <div class="col-md-4">
+        <div class="form-group">
+            <label asp-for="primary_address.city" class="control-label"></label>
+            <input asp-for="primary_address.city" class="form-control" />
+            <span asp-validation-for="primary_address.city" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-group">
+            <label asp-for="primary_address.state" class="control-label"></label>
+            <input asp-for="primary_address.state" class="form-control" />
+            <span asp-validation-for="primary_address.state" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-group">
+            <label asp-for="primary_address.zip_code" class="control-label"></label>
+            <input asp-for="primary_address.zip_code" class="form-control"/>
+            <span asp-validation-for="primary_address.zip_code" class="text-danger"></span>
+        </div>
+    </div>
+</div>
+<div class="row"><div class="col-md-12"><hr /></div></div>

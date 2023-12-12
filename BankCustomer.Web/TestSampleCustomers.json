@@ -1,0 +1,82 @@
+[
+  {
+    "customer_number": 15480,
+    "first_name": "Emilia",
+    "last_name": "Hacon",
+    "date_birth": "05/25/1987",
+    "ssn": "185-06-8331",
+    "email": "ehacon0@jalbum.net",
+    "primary_address": {
+      "address_line_1": "3630 Summerview Lane",
+      "city": "Young America",
+      "state": "MN",
+      "zip_code": 56172
+    },
+    "mobile_phone_number": "952-673-9284",
+    "join_date": "12/11/2016"
+  },
+  {
+    "customer_number": 98549,
+    "first_name": "Petronilla",
+    "last_name": "Stoffers",
+    "date_birth": "11/02/2014",
+    "ssn": "443-62-9160",
+    "email": "pstoffers1@globo.com",
+    "primary_address": {
+      "address_line_1": "6 Dovetail Junction",
+      "city": "Mountain View",
+      "state": "CA",
+      "zip_code": 30575
+    },
+    "mobile_phone_number": "650-502-4768",
+    "join_date": "04/16/1985"
+  },
+  {
+    "customer_number": 68546,
+    "first_name": "Devinne",
+    "last_name": "Mottershead",
+    "date_birth": "12/22/2001",
+    "ssn": "113-92-6094",
+    "email": "dmottershead2@is.gd",
+    "primary_address": {
+      "address_line_1": "2 Cardinal Center",
+      "city": "Fayetteville",
+      "state": "NC",
+      "zip_code": 39986
+    },
+    "mobile_phone_number": "910-514-3023",
+    "join_date": "12/12/2003"
+  },
+  {
+    "customer_number": 10858,
+    "first_name": "Hoyt",
+    "last_name": "Morrid",
+    "date_birth": "03/17/1970",
+    "ssn": "671-52-8621",
+    "email": "hmorrid3@yahoo.co.jp",
+    "primary_address": {
+      "address_line_1": "72 Gerald Way",
+      "city": "Santa Clara",
+      "state": "CA",
+      "zip_code": 15684
+    },
+    "mobile_phone_number": "831-840-8090",
+    "join_date": "03/07/1998"
+  },
+  {
+    "customer_number": 65494,
+    "first_name": "Christal",
+    "last_name": "Jonk",
+    "date_birth": "05/23/1938",
+    "ssn": "440-04-6398",
+    "email": "cjonk4@microsoft.com",
+    "primary_address": {
+      "address_line_1": "27492 Sunfield Alley",
+      "city": "Houston",
+      "state": "TX",
+      "zip_code": 55318
+    },
+    "mobile_phone_number": "713-866-9259",
+    "join_date": "03/20/1950"
+  }
+]
